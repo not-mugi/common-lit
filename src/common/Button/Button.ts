@@ -1,6 +1,6 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
-import { ButtonProps } from "@/types/[component]/Button";
+import { ButtonProps } from "@/types/[c]/Button";
 
 import "@common/Button/Button.scss";
 

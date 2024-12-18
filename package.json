@@ -2,7 +2,6 @@
   "name": "@mugijs/web-components",
   "version": "0.0.1",
   "description": "A language-agnostic UI/UX package for JavaScript frontend with Web Components",
-  "main": "src/index.js",
   "scripts": {
     "start": "vite",
     "build": "vite build",
