@@ -2,26 +2,24 @@ import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { ButtonProps } from "@/types/[c]/Button";
 
-import "@common/Button/Button.scss";
+import "@common/Button/button.scss";
 
 export const Button = ({
-  primary,
   size,
   label,
+  stretch,
   onClick,
+  theme = "light",
   backgroundColor = null,
 }: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
-
   return html`
     <button
       type="button"
       class=${[
-        "storybook-button",
-        `storybook-button--${size || "medium"}`,
-        mode,
+        "common-button",
+        `common-button--${theme}`,
+        `common-button--${size || "medium"}`,
+        `${stretch ? "common-button--stretch" : ""}`,
       ].join(" ")}
       style=${styleMap({ backgroundColor })}
       @click=${onClick}

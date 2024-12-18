@@ -13,20 +13,33 @@ export default {
       control: { type: "select" },
       options: ["small", "medium", "large"],
     },
+    theme: {
+      control: { type: "select" },
+      options: ["light", "dark", "mugi"],
+    },
+    stretch: { control: "boolean" },
   },
   args: { onClick: fn() },
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary = {
+export const Light = {
   args: {
-    primary: true,
+    theme: "light",
     label: "Button",
   },
 };
 
-export const Secondary = {
+export const Dark = {
   args: {
+    theme: "dark",
+    label: "Button",
+  },
+};
+
+export const Mugi = {
+  args: {
+    theme: "mugi",
     label: "Button",
   },
 };
@@ -42,5 +55,13 @@ export const Small = {
   args: {
     size: "small",
     label: "Button",
+  },
+};
+
+export const Stretch = {
+  args: {
+    size: "medium",
+    label: "Button",
+    stretch: true,
   },
 };
