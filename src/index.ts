@@ -1,2 +1,2 @@
-import "@web/index"
-import "@styles/global.scss"
+import "@web/index";
+import "@/global.scss";

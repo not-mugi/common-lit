@@ -1,6 +1,6 @@
 import { html } from "lit";
 
-import { Button } from "@stories/Button/Button";
+import { Button } from "@common";
 import "./header.css";
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => html`

@@ -8,8 +8,9 @@
 
     "baseUrl": "./",
     "paths": {
+      "@/*": ["src/*"],
       "@web/*": ["src/web/*"],
-      "@styles/*": ["src/styles/*"],
+      "@common/*": ["src/common/*"],
       "@stories/*": ["src/stories/*"]
     },
 
@@ -28,6 +29,6 @@
     "noUncheckedSideEffectImports": true
   },
 
-  "include": ["src", "ts/styles.d.ts"],
+  "include": ["src", "ts"],
   "exclude": ["node_modules"]
 }

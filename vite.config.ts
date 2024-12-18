@@ -2,44 +2,20 @@
 
 import { resolve } from "path";
 
-interface AliasOptions {
-  [key: string]: string;
-}
-
-interface ResolveOptions {
-  alias: AliasOptions;
-}
-
-interface LibOptions {
-  entry: string;
-  name: string;
-  fileName: (format: string) => string;
-}
-
-interface BuildOptions {
-  lib: LibOptions;
-}
-
-interface ViteConfig {
-  resolve: ResolveOptions;
-  build: BuildOptions;
-}
-
-const config: ViteConfig = {
+export default {
   resolve: {
     alias: {
+      "@": resolve(__dirname, "src"),
       "@web": resolve(__dirname, "src/web"),
-      "@styles": resolve(__dirname, "src/styles"),
+      "@common": resolve(__dirname, "src/common"),
       "@stories": resolve(__dirname, "src/stories"),
     },
   },
   build: {
     lib: {
       entry: "src/index.ts",
-      name: "MugiWebComponents",
-      fileName: (format) => `mugi-web-components.${format}.js`,
+      name: "mugi-web-components",
+      fileName: (format: string) => `mugi-web-components.${format}.js`,
     },
   },
 };
-
-export default config;

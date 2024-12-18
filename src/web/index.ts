@@ -1,1 +1,1 @@
-export * from "@web/Components/ExampleComponent/ExampleComponent"
+export * from "@web/ExampleComponent/ExampleComponent";

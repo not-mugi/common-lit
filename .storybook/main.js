@@ -14,6 +14,18 @@ const config = {
       resolve: {
         alias: [
           {
+            find: "@",
+            replacement: path.resolve(__dirname, "../src"),
+          },
+          {
+            find: "@web",
+            replacement: path.resolve(__dirname, "../src/web"),
+          },
+          {
+            find: "@common",
+            replacement: path.resolve(__dirname, "../src/common"),
+          },
+          {
             find: "@stories",
             replacement: path.resolve(__dirname, "../src/stories"),
           },
