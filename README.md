@@ -1,1 +1,1 @@
-# mugi-wcomponents
+# Mugi web components

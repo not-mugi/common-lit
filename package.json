@@ -1,0 +1,38 @@
+{
+  "name": "@mugijs/web-components",
+  "version": "0.0.1",
+  "description": "A language-agnostic UI/UX package for JavaScript frontend with Web Components",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [
+    "ui",
+    "ux",
+    "javascript",
+    "frontend",
+    "web components"
+  ],
+  "author": "mugijs",
+  "license": "ISC",
+  "devDependencies": {
+    "@chromatic-com/storybook": "3.2.2",
+    "@storybook/addon-essentials": "8.4.7",
+    "@storybook/blocks": "8.4.7",
+    "@storybook/test": "8.4.7",
+    "@storybook/web-components": "8.4.7",
+    "@storybook/web-components-vite": "8.4.7",
+    "@types/node": "^22.10.2",
+    "eslint": "^9.17.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-storybook": "^0.11.1",
+    "lit": "^3.2.1",
+    "sass-embedded": "^1.83.0",
+    "storybook": "^8.4.7",
+    "vite": "^6.0.3"
+  }
+}

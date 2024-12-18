@@ -1,0 +1,17 @@
+$font-stack: Arial, sans-serif;
+$primary-color: blue;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+}
+
+:host {
+  display: block;
+  font-family: $font-stack;
+}
+
+div {
+  color: $primary-color;
+}
