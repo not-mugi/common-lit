@@ -5,17 +5,16 @@ import { resolve } from "path";
 export default {
   resolve: {
     alias: {
-      "@": resolve(__dirname, "src"),
-      "@web": resolve(__dirname, "src/web"),
-      "@common": resolve(__dirname, "src/common"),
-      "@stories": resolve(__dirname, "src/stories"),
+      "@": resolve(__dirname, "lib"),
+      "@components": resolve(__dirname, "lib/components"),
     },
   },
   build: {
     lib: {
-      entry: "src/index.ts",
+      entry: [resolve(__dirname, "lib/main.ts")],
       name: "mugi-web-components",
       fileName: (format: string) => `mugi-web-components.${format}.js`,
+      cssFileName: "mugi-web-components",
     },
   },
 };

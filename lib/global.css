@@ -1,0 +1,36 @@
+:root {
+  /* Font */
+  --font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Light Theme */
+  --light-background: #ffffff;
+  --light-text: #333333;
+  --light-primary: #0066cc;
+  --light-secondary: #ff5733;
+  --light-border: #e1e1e1;
+  --light-hover: #f1f1f1;
+  --light-accent: #ffd700;
+  --light-muted: #888888;
+  --light-success: #28a745;
+  --light-danger: #dc3545;
+  --light-warning: #ffc107;
+  --light-info: #17a2b8;
+
+  /* Dark Theme */
+  --dark-background: #121212;
+  --dark-text: #e0e0e0;
+  --dark-primary: #1e90ff;
+  --dark-secondary: #ff6f61;
+  --dark-border: #333333;
+  --dark-hover: #2c2c2c;
+  --dark-accent: #ffb800;
+  --dark-muted: #b0b0b0;
+  --dark-success: #28a745;
+  --dark-danger: #ff4c4c;
+  --dark-warning: #ffb300;
+  --dark-info: #17a2b8;
+
+  /* Domain Specific */
+  --mugi-primary: #ebc77c;
+  --mugi-secondary: #af4141;
+}
