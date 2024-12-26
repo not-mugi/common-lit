@@ -18,7 +18,7 @@
   },
   "sideEffects": false,
   "version": "0.0.1",
-  "description": "A language-agnostic UI/UX package for JavaScript frontend with Web Components",
+  "description": "A framework-agnostic UI/UX package for JavaScript with Web Components",
   "scripts": {
     "version:bump": "node scripts/version.js",
     "dev": "vite",
