@@ -1,40 +1,62 @@
 {
   "name": "@mugi-js/web-components",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "main": "./dist/mugi-web-components.umd.cjs",
   "module": "./dist/mugi-web-components.es.js",
+  "types": "./dist/types/main.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/types/main.d.ts",
       "import": "./dist/mugi-web-components.es.js",
       "require": "./dist/mugi-web-components.umd.cjs"
     },
-    "./style.css": "./dist/mugi-web-components.css"
+    "./style.css": "./dist/web-components.css"
   },
+  "sideEffects": false,
   "version": "0.0.1",
   "description": "A language-agnostic UI/UX package for JavaScript frontend with Web Components",
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "version:bump": "node scripts/version.js",
+    "dev": "vite",
+    "build": "npm run clean && npm run build:types && vite build",
+    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --ext .ts",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "ui",
     "ux",
     "javascript",
     "frontend",
-    "web components"
+    "web components",
+    "lit",
+    "typescript"
   ],
-  "author": "mugijs",
+  "author": "zwesithu@mugi-tech.com",
   "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "peerDependencies": {
+    "lit": "^3.2.1"
+  },
   "devDependencies": {
-    "lit": "^3.2.1",
-    "vite": "^6.0.3",
+    "@open-wc/testing": "^3.2.0",
+    "@testing-library/jest-dom": "^6.1.0",
+    "@types/node": "^22.10.2",
     "eslint": "^9.17.0",
     "eslint-plugin-import": "^2.31.0",
+    "happy-dom": "^12.0.0",
     "typescript": "^5.7.2",
-    "@types/node": "^22.10.2"
+    "vite": "^6.0.3",
+    "vite-plugin-dts": "^4.4.0",
+    "vitest": "^1.0.0"
   }
 }

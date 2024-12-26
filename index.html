@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MUGI web components</title>
-</head>
-<body>
-  <lit-button buttonSize="lg" buttonTheme="mugi"></lit-button>
-  <script type="module" src="/src/index.ts"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUGI web components</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <mugi-container height="100vh">
+      <mugi-button size="lg"></mugi-button>
+    </mugi-container>
+    <script type="module" src="/lib/main.ts"></script>
+  </body>
 </html>

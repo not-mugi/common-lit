@@ -1,2 +1,2 @@
-import "@/global.css"
-export * from "@components/index"
+import "@/main.css";
+export * as molecules from "@molecules/index";
