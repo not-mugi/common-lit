@@ -1,7 +1,7 @@
-import { ComponentDimensions, Theme } from "@utils/types";
+import { Size, Theme } from "@utils/types";
 
+export type ButtonSize = Size;
 export type ButtonTheme = Theme;
-export type ButtonSize = ComponentDimensions;
 export type ButtonVariant = "filled" | "outlined" | "text";
 
 export interface ButtonProps {
@@ -64,6 +64,6 @@ export type ButtonClickCallback = (e: MouseEvent) => void;
 
 declare global {
   interface HTMLElementTagNameMap {
-    "lm-button": ButtonProps;
+    "mugi-button": ButtonProps;
   }
 }

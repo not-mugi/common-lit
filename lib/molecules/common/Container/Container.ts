@@ -1,31 +1,49 @@
-import { ComponentDimensions } from "@/utils";
-import { LitElement, html, css } from "lit";
+import { LitElement, html, CSSResultGroup } from "lit";
 import { property, customElement } from "lit/decorators.js";
-
-type ContainerProps = {
-  width: ComponentDimensions | "full";
-};
+import { Theme } from "@/utils";
+import { constructCSSClass } from "@/utils/css";
+import { ContainerStyles } from "@molecules/common/Container/container.style";
+import {
+  BorderColor,
+  BorderRadius,
+  BorderWidth,
+  ContainerProps,
+  ContainerSize,
+} from "@molecules/common/Container/container.types";
 
 @customElement("mugi-container")
 export class Container extends LitElement implements ContainerProps {
-  @property({ type: String }) width: ComponentDimensions = "xl";
-  @property({ type: String }) height = "auto";
-  @property({ type: String }) border = "none";
-  @property({ type: String }) radius = "none";
-  @property({ type: String }) theme = "light";
-  @property({ type: Number }) zIndex = 1;
+  static styles: CSSResultGroup = [ContainerStyles];
 
-  static styles = css`
-    .container {
-      width: var(--container-width, auto);
-      height: var(--container-height, auto);
-      border: var(--container-border, none);
-      background-color: var(--container-background-color, blue);
-      z-index: var(--container-z-index, 1);
-    }
-  `;
+  @property({ type: String }) theme: Theme = "light";
+  @property({ type: String }) size: ContainerSize = "sm";
+  @property({ type: String }) borderWidth: BorderWidth = "none";
+  @property({ type: String }) borderColor: BorderColor = "none";
+  @property({ type: String }) borderRadius: BorderRadius = "none";
+  @property({ type: String }) borderTopLeftRadius: BorderRadius = "none";
+  @property({ type: String }) borderTopRightRadius: BorderRadius = "none";
+  @property({ type: String }) borderBottomLeftRadius: BorderRadius = "none";
+  @property({ type: String }) borderBottomRightRadius: BorderRadius = "none";
 
   render() {
-    return html`<div class="container"><slot></slot></div>`;
+    const classes = {
+      ["mugi-container"]: true,
+      [`mugi-container--${this.theme}`]: true,
+      [`mugi-container--${this.size}`]: true,
+      [`mugi-container-border--${this.borderColor}--${this.borderWidth}`]:
+        this.borderWidth !== "none",
+      [`mugi-container-border-radius--${this.borderRadius}`]:
+        this.borderRadius !== "none",
+      [`mugi-container-border-top-left-radius--${this.borderTopLeftRadius}`]:
+        this.borderTopLeftRadius !== "none",
+      [`mugi-container-border-top-right-radius--${this.borderTopRightRadius}`]:
+        this.borderTopRightRadius !== "none",
+      [`mugi-container-border-bottom-left-radius--${this.borderBottomLeftRadius}`]:
+        this.borderBottomLeftRadius !== "none",
+      [`mugi-container-border-bottom-right-radius--${this.borderBottomRightRadius}`]:
+        this.borderBottomRightRadius !== "none",
+    };
+
+    return html`<div class=${constructCSSClass(classes)}><slot></slot></div>`;
   }
 }

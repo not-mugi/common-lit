@@ -18,6 +18,6 @@ export type EventCallback<T = Event> = (event: T) => void;
 /**
  * Type helper for component sizes
  */
-export type ComponentDimensions = "sm" | "md" | "lg" | "xl";
+export type Size = "sm" | "md" | "lg" | "xl";
 
 export type Theme = "light" | "dark" | "mugi";
