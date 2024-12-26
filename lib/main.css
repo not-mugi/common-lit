@@ -1,0 +1,72 @@
+:root {
+  /* Font */
+  --font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Light Theme */
+  --light-background: #f8f9fa;
+  --light-text: #343a40;
+  --light-primary: #007bff;
+  --light-secondary: #6c757d;
+  --light-border: #fff;
+  --light-hover: #e9ecef;
+  --light-accent: #ffc107;
+  --light-muted: #6c757d;
+  --light-success: #28a745;
+  --light-danger: #dc3545;
+  --light-warning: #ffc107;
+  --light-info: #17a2b8;
+
+  /* Dark Theme */
+  --dark-background: #121212;
+  --dark-text: #e0e0e0;
+  --dark-primary: #1e90ff;
+  --dark-secondary: #ff6f61;
+  --dark-border: #333333;
+  --dark-hover: #2c2c2c;
+  --dark-accent: #ffb800;
+  --dark-muted: #b0b0b0;
+  --dark-success: #28a745;
+  --dark-danger: #ff4c4c;
+  --dark-warning: #ffb300;
+  --dark-info: #17a2b8;
+
+  /* Domain Specific */
+  --mugi-primary: #ebc77c;
+  --mugi-secondary: #af4141;
+  --mugi-border: #df8e5a;
+
+  /* General */
+  --sm-width: 576px;
+  --md-width: 768px;
+  --lg-width: 992px;
+  --xl-width: 1200px;
+  --full-width: 100%;
+  --screen-width: 100vw;
+
+  --sm-height: 576px;
+  --md-height: 768px;
+  --lg-height: 992px;
+  --xl-height: 1200px;
+  --full-height: 100%;
+  --screen-height: 100vh;
+
+  --sm-b-radius: 0.25rem;
+  --md-b-radius: 0.5rem;
+  --lg-b-radius: 1rem;
+  --xl-b-radius: 2rem;
+
+  --sm-padding: 0.5rem;
+  --md-padding: 1rem;
+  --lg-padding: 1.5rem;
+  --xl-padding: 2rem;
+
+  --sm-margin: 0.5rem;
+  --md-margin: 1rem;
+  --lg-margin: 1.5rem;
+  --xl-margin: 2rem;
+
+  --sm-b-width: 1px;
+  --md-b-width: 2px;
+  --lg-b-width: 3px;
+  --xl-b-width: 4px;
+}
