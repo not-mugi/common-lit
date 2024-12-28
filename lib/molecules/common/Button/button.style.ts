@@ -4,7 +4,6 @@ export const ButtonStyles = css`
   :host {
     --button-background-color: var(--light-background);
     --button-text-color: var(--light-text);
-    --button-border-radius: 3em;
     --button-font-size: 1rem;
   }
 
@@ -22,7 +21,6 @@ export const ButtonStyles = css`
     text-decoration: none;
     background-color: var(--button-background-color);
     color: var(--button-text-color);
-    border-radius: var(--button-border-radius);
     font-size: var(--button-font-size);
     font-weight: 500;
     line-height: 1.75;
@@ -109,5 +107,21 @@ export const ButtonStyles = css`
   .mugi-button--mugi:hover:not(.button--disabled) {
     background-color: var(--mugi-secondary, #ffffff);
     color: var(--mugi-primary, #007bff);
+  }
+
+  .mugi-button--rounded-sm {
+    border-radius : var(--sm-b-radius)
+  }
+
+  .mugi-button--rounded-md {
+    border-radius: var(--md-b-radius);
+  }
+
+  .mugi-button--rounded-lg {
+    border-radius: var(--lg-b-radius)
+  }
+
+  .mugi-button--rounded-xl {
+    border-radius: var(--xl-b-radius)
   }
 `;

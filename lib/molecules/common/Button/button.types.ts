@@ -1,6 +1,7 @@
 import { Size, Theme } from "@utils/types";
 
 export type ButtonSize = Size;
+export type ButtonRounded = Size | "none";
 export type ButtonTheme = Theme;
 export type ButtonVariant = "filled" | "outlined" | "text";
 
@@ -51,6 +52,12 @@ export interface ButtonProps {
    * @default false
    */
   disabled?: boolean;
+
+  /**
+   * Button border radius
+   * @default "none"
+   */
+  rounded?: ButtonRounded;
 
   /**
    * Click event handler

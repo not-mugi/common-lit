@@ -5,6 +5,7 @@ import { ButtonStyles } from "@molecules/common/Button/button.style";
 import {
   ButtonClickCallback,
   ButtonProps,
+  ButtonRounded,
   ButtonSize,
   ButtonTheme,
   ButtonVariant,
@@ -24,6 +25,7 @@ export class Button extends LitElement implements ButtonProps {
   backgroundColor?: string;
   @property({ type: String, reflect: true }) variant: ButtonVariant = "filled";
   @property({ type: Boolean, reflect: true }) disabled = false;
+  @property({ type: String, reflect: true }) rounded: ButtonRounded = "none";
 
   @property({ type: Function, reflect: true })
   onClick: ButtonClickCallback = () => {};
@@ -34,6 +36,7 @@ export class Button extends LitElement implements ButtonProps {
       [`mugi-button--${this.size}`]: true,
       [`mugi-button--${this.theme}`]: true,
       [`mugi-button--${this.variant}`]: true,
+      [`mugi-button--rounded-${this.rounded}`]: this.rounded !== "none",
       "mugi-button--x-stretch": this.xStretch,
       "mugi-button--y-stretch": this.yStretch,
       "mugi-button--disabled": this.disabled,
