@@ -1,2 +1,3 @@
-export * from "@molecules/common/Button/Button";
-export * from "@molecules/common/Container/Container";
+export * from "@/molecules/common/Button";
+export * from "@/molecules/common/Container";
+export * from "@/molecules/common/Alignment";

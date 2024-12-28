@@ -58,16 +58,7 @@ export interface ButtonProps {
    * @default "none"
    */
   rounded?: ButtonRounded;
-
-  /**
-   * Click event handler
-   */
-  onClick: (e: MouseEvent) => void;
 }
-/**
- * Custom event type for button click events
- */
-export type ButtonClickCallback = (e: MouseEvent) => void;
 
 declare global {
   interface HTMLElementTagNameMap {

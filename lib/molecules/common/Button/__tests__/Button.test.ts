@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { Button } from "@molecules/common/Button/Button";
+import { Button } from "@/molecules/common/Button";
 import { ComponentValidationError } from "@utils/validation";
 import { fixture, html } from "@open-wc/testing";
 

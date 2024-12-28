@@ -12,8 +12,20 @@
     </style>
   </head>
   <body>
-    <mugi-container>
-      <mugi-button rounded="lg" theme="mugi" size="lg"></mugi-button>
+    <mugi-container theme="mugi">
+      <mugi-x-flex style="background-color: purple">
+        <mugi-x-flex
+          overlay
+          gap="xl"
+          justify="center"
+          align="center"
+          style="background-color: aqua"
+        >
+          <mugi-button rounded="lg" theme="mugi" size="lg"></mugi-button>
+          <mugi-button rounded="xl" theme="light" size="xl"></mugi-button>
+          <mugi-button rounded="md" theme="dark" size="md"></mugi-button>
+        </mugi-x-flex>
+      </mugi-x-flex>
     </mugi-container>
     <script type="module" src="/lib/main.ts"></script>
   </body>

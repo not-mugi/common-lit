@@ -3,7 +3,6 @@ import { customElement, property } from "lit/decorators.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { ButtonStyles } from "@molecules/common/Button/button.style";
 import {
-  ButtonClickCallback,
   ButtonProps,
   ButtonRounded,
   ButtonSize,
@@ -27,9 +26,6 @@ export class Button extends LitElement implements ButtonProps {
   @property({ type: Boolean, reflect: true }) disabled = false;
   @property({ type: String, reflect: true }) rounded: ButtonRounded = "none";
 
-  @property({ type: Function, reflect: true })
-  onClick: ButtonClickCallback = () => {};
-
   render() {
     const classes = {
       ["mugi-button"]: true,
@@ -52,7 +48,6 @@ export class Button extends LitElement implements ButtonProps {
         class=${constructCSSClass(classes)}
         style=${styleMap(styles)}
         ?disabled=${this.disabled}
-        @click=${this.onClick}
       >
         <slot>${this.label}</slot>
       </button>

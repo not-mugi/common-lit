@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { ButtonProps } from "@molecules/common/Button/button.types";
-import { Button } from "@molecules/common/Button/Button";
+import { Button } from "@/molecules/common/Button";
 import { fixture, html } from "@open-wc/testing";
 
 describe("Backward Compatibility", () => {
