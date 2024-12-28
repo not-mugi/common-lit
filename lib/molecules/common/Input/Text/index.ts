@@ -11,18 +11,6 @@ export class MugiTextInput extends LitElement {
   static styles = [
     // sharedStyles,
     css`
-      :host {
-        display: inline-block;
-        font-family: var(--font-family, sans-serif);
-      }
-      label {
-        display: flex;
-        flex-direction: column;
-      }
-      span {
-        margin-bottom: 4px;
-        color: var(--label-color, #444);
-      }
       input {
         padding: 8px;
         font-size: 1rem;
