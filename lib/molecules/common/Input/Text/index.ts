@@ -1,44 +1,47 @@
-import { LitElement, html, css } from "lit";
+import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
+import { TextStyles } from "@molecules/common/Input/Text/text.style";
+import {
+  TextInputProps,
+  TextInputSize,
+  TextInputStretch,
+} from "@molecules/common/Input/Text/text.types";
+import { constructCSSClass } from "@/utils/css";
 
 @customElement("mugi-text-input")
-export class MugiTextInput extends LitElement {
-  @property({ type: String }) label = "";
+export class TextInput extends LitElement implements TextInputProps {
+  @property({ type: String }) size: TextInputSize = "md";
   @property({ type: String }) value = "";
   @property({ type: String }) placeholder = "";
   @property({ type: Boolean }) disabled = false;
+  @property({ type: String }) stretch: TextInputStretch = "none";
 
-  static styles = [
-    // sharedStyles,
-    css`
-      input {
-        padding: 8px;
-        font-size: 1rem;
-        border: 1px solid var(--border-color, #ccc);
-        border-radius: 4px;
-        background-color: var(--input-bg, white);
-      }
-      input:focus {
-        outline: none;
-        border-color: var(--focus-color, #0078d4);
-      }
-      input[disabled] {
-        background-color: var(--disabled-bg, #f0f0f0);
-        cursor: not-allowed;
-      }
-    `,
-  ];
+  static styles = [TextStyles];
+
+  updated(changedProperties: Map<string | number | symbol, unknown>) {
+    if (changedProperties.has("size")) {
+      this.style.setProperty(
+        "--input-font-size",
+        `var(--${this.size}-font-size)`
+      );
+      this.style.setProperty("--input-padding", `var(--${this.size}-input-pd)`);
+    }
+  }
 
   render() {
+    const classes = {
+      "mugi-text-input": true,
+      [`mugi-text-input--${this.size}`]: true,
+      [`mugi-text-input--${this.stretch}`]: this.stretch !== "none",
+    };
+
     return html`
-      <label>
-        <span>${this.label}</span>
-        <input
-          .value=${this.value}
-          .placeholder=${this.placeholder}
-          ?disabled=${this.disabled}
-        />
-      </label>
+      <input
+        class=${constructCSSClass(classes)}
+        .value=${this.value}
+        .placeholder=${this.placeholder}
+        ?disabled=${this.disabled}
+      />
     `;
   }
 }
