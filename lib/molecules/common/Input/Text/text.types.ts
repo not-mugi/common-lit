@@ -10,3 +10,9 @@ export type TextInputProps = {
   disabled: boolean;
   placeholder: string;
 };
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "mugi-text-input": TextInputProps;
+  }
+}

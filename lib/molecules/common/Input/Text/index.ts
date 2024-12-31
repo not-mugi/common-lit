@@ -10,10 +10,10 @@ import { constructCSSClass } from "@/utils/css";
 
 @customElement("mugi-text-input")
 export class TextInput extends LitElement implements TextInputProps {
-  @property({ type: String }) size: TextInputSize = "md";
+  @property({ type: String }) size: TextInputSize = "sm";
   @property({ type: String }) value = "";
-  @property({ type: String }) placeholder = "";
   @property({ type: Boolean }) disabled = false;
+  @property({ type: String }) placeholder = "";
   @property({ type: String }) stretch: TextInputStretch = "none";
 
   static styles = [TextStyles];

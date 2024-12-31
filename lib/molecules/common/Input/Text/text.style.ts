@@ -9,7 +9,8 @@ export const TextStyles = css`
     box-sizing: border-box;
     font-size: var(--input-font-size);
     padding: var(--input-padding);
-    border: 1px solid var(--border-color, #ccc);
+    border: inherit;
+    border-radius: inherit;
     background-color: var(--input-bg, white);
   }
 
